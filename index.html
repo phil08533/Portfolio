@@ -1,131 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philip Gonzales | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Philip Gonzales | Portfolio</title>
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<!-- NAV -->
 <header>
     <div class="container nav">
         <h1>Philip Gonzales</h1>
         <nav>
-            <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="#resume">Resume</a>
-            <a href="#contact">Contact</a>
+            <a href="resume/resume.pdf" target="_blank">Resume</a>
         </nav>
     </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="container hero-content">
-        <img src="headshot.png" alt="Headshot">
-        <div>
-            <h2>Cybersecurity & Software Developer</h2>
-            <p>Building real-world applications, simulations, and tools that solve meaningful problems.</p>
-            <a href="resume/resume.pdf" class="btn" target="_blank">Download Resume</a>
-        </div>
+<section class="hero container">
+    <img src="headshot.png" class="headshot">
+    <div>
+        <h2>Cybersecurity & Software Developer</h2>
+        <p>Building real-world tools, simulations, and platforms.</p>
     </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="container section">
-    <h2>About Me</h2>
-    <p>
-        I'm a Computer Information Systems and Cybersecurity student at Concord University.
-        I specialize in building real-world applications including cybersecurity simulations,
-        media platforms, and full-stack prototypes. I enjoy solving complex problems and creating tools that people actually use.
-    </p>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="container section">
+<section id="projects" class="container">
     <h2>Projects</h2>
 
     <div class="projects-grid">
 
-        <!-- VoidScroll -->
-        <div class="card">
-            <img src="projects/voidscroll/1.png">
+        <div class="card" onclick="openModal('voidscroll')">
+            <div class="image-container" data-folder="voidscroll"></div>
             <h3>VoidScroll</h3>
-            <p>Infinite scroll video platform with 30,000+ public domain videos. Built with pure HTML, CSS, JS and runs as a PWA.</p>
-            <a href="https://voidscroll.org" target="_blank">Visit Site</a>
         </div>
 
-        <!-- Portal Music -->
-        <div class="card">
-            <img src="projects/portal-music/1.png">
+        <div class="card" onclick="openModal('portal-music')">
+            <div class="image-container" data-folder="portal-music"></div>
             <h3>Portal Music</h3>
-            <p>Free music library for creators with no copyright risk. Features search, player, and client-side storage.</p>
-            <a href="https://portal-music.com" target="_blank">Visit Site</a>
         </div>
 
-        <!-- Risk Vector -->
-        <div class="card">
-            <img src="projects/riskvector/1.png">
+        <div class="card" onclick="openModal('riskvector')">
+            <div class="image-container" data-folder="riskvector"></div>
             <h3>Risk Vector</h3>
-            <p>Cyber attack simulation platform using Monte Carlo modeling to estimate business risk and attack paths.</p>
-            <a href="https://riskvector.org" target="_blank">Visit Site</a>
         </div>
 
-        <!-- AI Music -->
-        <div class="card">
-            <img src="projects/ai-music/1.png">
-            <h3>AI Music Experiment</h3>
-            <p>Exploration of AI-generated music, publishing, and monetization across streaming platforms.</p>
+        <div class="card" onclick="openModal('ai-music')">
+            <div class="image-container" data-folder="ai-music"></div>
+            <h3>AI Music</h3>
         </div>
 
-        <!-- Pet App -->
-        <div class="card">
-            <img src="projects/pet-app/1.png">
-            <h3>Lost Pet Finder</h3>
-            <p>Team-built Flask application connecting lost animals with shelters and foster homes.</p>
+        <div class="card" onclick="openModal('pet-app')">
+            <div class="image-container" data-folder="pet-app"></div>
+            <h3>Lost Pet App</h3>
         </div>
 
-        <!-- Cyber Game -->
-        <div class="card">
-            <img src="projects/cyber-game/1.png">
+        <div class="card" onclick="openModal('cyber-game')">
+            <div class="image-container" data-folder="cyber-game"></div>
             <h3>Cybersecurity Game</h3>
-            <p>Interactive adventure game teaching cybersecurity concepts through mini-games and storytelling.</p>
         </div>
 
-        <!-- Movie Monster -->
-        <div class="card">
-            <img src="projects/movie-monster/1.png">
+        <div class="card" onclick="openModal('movie-monster')">
+            <div class="image-container" data-folder="movie-monster"></div>
             <h3>Movie Monster</h3>
-            <p>Movie tracking app using APIs, Google Sheets, and automation for managing watchlists and ratings.</p>
         </div>
 
     </div>
 </section>
 
-<!-- RESUME -->
-<section id="resume" class="container section">
-    <h2>Resume</h2>
-    <a href="resume/resume.pdf" class="btn" target="_blank">View Resume</a>
-</section>
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
 
-<!-- CONTACT -->
-<section id="contact" class="container section">
-    <h2>Contact</h2>
-    <p>Email: riskvector.org@gmail.com</p>
-    <p>
-        LinkedIn: 
-        <a href="https://www.linkedin.com/in/philip-gonzales/" target="_blank">
-            linkedin.com/in/philip-gonzales
-        </a>
-    </p>
-</section>
+        <div class="carousel">
+            <button onclick="prevImage()">❮</button>
+            <img id="carousel-image">
+            <button onclick="nextImage()">❯</button>
+        </div>
+    </div>
+</div>
 
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 Philip Gonzales</p>
-</footer>
+<script>
+const projects = {
+    "voidscroll": {
+        title: "VoidScroll",
+        description: "Infinite scroll video platform with 30,000+ public domain videos. Built with pure HTML, CSS, JS, and runs as a PWA with no backend.",
+        images: ["1.png","2.png","3.png"]
+    },
+    "portal-music": {
+        title: "Portal Music",
+        description: "Free music library for creators with zero copyright risk. Includes search, player, and client-side features.",
+        images: ["1.png","2.png"]
+    },
+    "riskvector": {
+        title: "Risk Vector",
+        description: "Cyber attack simulator using Monte Carlo modeling to predict attack paths and financial impact.",
+        images: ["1.png","2.png"]
+    },
+    "ai-music": {
+        title: "AI Music Experiment",
+        description: "Exploration into AI-generated music, publishing, and monetization.",
+        images: ["1.png"]
+    },
+    "pet-app": {
+        title: "Lost Pet Finder",
+        description: "Flask-based team project to connect lost pets with shelters and foster homes.",
+        images: ["1.png"]
+    },
+    "cyber-game": {
+        title: "Cybersecurity Game",
+        description: "Interactive learning game with mini-games teaching cybersecurity concepts.",
+        images: ["1.png"]
+    },
+    "movie-monster": {
+        title: "Movie Monster",
+        description: "Movie tracking app using APIs, Google Sheets, and automation.",
+        images: ["1.png"]
+    }
+};
+
+// LOAD FIRST IMAGE INTO CARDS
+document.querySelectorAll(".image-container").forEach(container => {
+    const folder = container.dataset.folder;
+    const img = document.createElement("img");
+    img.src = `projects/${folder}/${projects[folder].images[0]}`;
+    container.appendChild(img);
+});
+
+let currentProject = null;
+let currentIndex = 0;
+
+function openModal(projectKey) {
+    currentProject = projects[projectKey];
+    currentIndex = 0;
+
+    document.getElementById("modal-title").innerText = currentProject.title;
+    document.getElementById("modal-description").innerText = currentProject.description;
+
+    updateImage(projectKey);
+
+    document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+function updateImage(projectKey) {
+    const img = document.getElementById("carousel-image");
+    img.src = `projects/${projectKey}/${currentProject.images[currentIndex]}`;
+}
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % currentProject.images.length;
+    updateImage(getKey());
+}
+
+function prevImage() {
+    currentIndex = (currentIndex - 1 + currentProject.images.length) % currentProject.images.length;
+    updateImage(getKey());
+}
+
+function getKey() {
+    return Object.keys(projects).find(key => projects[key] === currentProject);
+}
+</script>
 
 </body>
 </html>
