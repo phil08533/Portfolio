@@ -335,10 +335,12 @@ nav a:hover {
 
 /* === CAROUSEL === */
 .carousel {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
     margin-bottom: 8px;
+    overflow: hidden;
 }
 
 .carousel-btn {
@@ -355,8 +357,18 @@ nav a:hover {
     justify-content: center;
     flex-shrink: 0;
     transition: background 0.2s, border-color 0.2s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+.carousel-btn:first-of-type {
+    left: 10px;
 }
 
+.carousel-btn:last-of-type {
+    right: 10px;
+}
 .carousel-btn:hover {
     background: var(--border);
     border-color: var(--accent);
@@ -365,7 +377,7 @@ nav a:hover {
 #carousel-image {
     flex: 1;
     max-height: 360px;
-    width: 100%;
+    width: auto;
     object-fit: contain;
     border-radius: 8px;
     background: var(--surface2);
