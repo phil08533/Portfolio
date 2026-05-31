@@ -76,7 +76,49 @@
                 <div class="tags">
                     <span>Cybersecurity</span><span>Monte Carlo</span><span>JavaScript</span>
                 </div>
-                <a class="card-link" href="https://riskvector.org" target="_blank" onclick="event.stopPropagation()">riskvector.org &#8594;</a>
+                <a class="card-link" href="https://www.riskvector.org" target="_blank" onclick="event.stopPropagation()">riskvector.org &#8594;</a>
+            </div>
+        </div>
+
+        <div class="card" onclick="openModal('runway')">
+            <div class="card-thumb">
+                <img src="projects/runway/runway-overview.png" alt="Runway">
+            </div>
+            <div class="card-body">
+                <h3>Runway</h3>
+                <p>Budget tracking app that calculates your financial runway &mdash; see exactly how long your savings can sustain you given all your income and expenses.</p>
+                <div class="tags">
+                    <span>HTML/CSS/JS</span><span>GitHub Pages</span><span>Budgeting</span>
+                </div>
+                <a class="card-link" href="https://phil08533.github.io/runway/" target="_blank" onclick="event.stopPropagation()">phil08533.github.io/runway &#8594;</a>
+            </div>
+        </div>
+
+        <div class="card" onclick="openModal('rps-clash')">
+            <div class="card-thumb">
+                <img src="projects/rps-clash/rps-main.png" alt="RPS Clash">
+            </div>
+            <div class="card-body">
+                <h3>RPS Clash</h3>
+                <p>Online multiplayer rock paper scissors game. Battle real players or the computer, earn coins, unlock characters, and buy power-ups.</p>
+                <div class="tags">
+                    <span>Multiplayer</span><span>Game Dev</span><span>JavaScript</span>
+                </div>
+                <a class="card-link" href="https://www.rps-clash.com/" target="_blank" onclick="event.stopPropagation()">rps-clash.com &#8594;</a>
+            </div>
+        </div>
+
+        <div class="card" onclick="openModal('timeline')">
+            <div class="card-thumb">
+                <img src="projects/timeline/timeline-landing.png" alt="My Circle">
+            </div>
+            <div class="card-body">
+                <h3>My Circle</h3>
+                <p>Private social media app that lives entirely on your Google Drive. No servers, no ads &mdash; your photos and stories stay in your own cloud storage.</p>
+                <div class="tags">
+                    <span>Google Drive API</span><span>GitHub Pages</span><span>OAuth</span>
+                </div>
+                <a class="card-link" href="https://phil08533.github.io/TimeLine/" target="_blank" onclick="event.stopPropagation()">phil08533.github.io/TimeLine &#8594;</a>
             </div>
         </div>
 
@@ -99,7 +141,7 @@
             </div>
             <div class="card-body">
                 <h3>Lost Pet Finder</h3>
-                <p>University team project &mdash; a Flask-based app connecting lost animals with shelters and foster homes, built as part of a full SDLC process.</p>
+                <p>University team project &mdash; a Flask-based app connecting lost animals with shelters and foster homes, built through a full SDLC process.</p>
                 <div class="tags">
                     <span>Flask</span><span>SQLite</span><span>Python</span><span>Team Project</span>
                 </div>
@@ -108,14 +150,15 @@
 
         <div class="card" onclick="openModal('cyber-game')">
             <div class="card-thumb">
-                <img src="projects/cyber-game/cybergame.png" alt="Cybersecurity Game">
+                <img src="projects/cyber-game/cybergame.png" alt="Hack Attack">
             </div>
             <div class="card-body">
-                <h3>Cybersecurity Adventure Game</h3>
-                <p>Capstone project &mdash; a cybersecurity-themed adventure game with original mini-games, art, and storytelling built in the Godot engine.</p>
+                <h3>Hack Attack</h3>
+                <p>Completed capstone game &mdash; a cybersecurity-themed adventure with original mini-games, art, and storytelling. Built in Godot.</p>
                 <div class="tags">
                     <span>Godot</span><span>GDScript</span><span>Game Dev</span><span>Capstone</span>
                 </div>
+                <a class="card-link" href="https://loveandmilk.itch.io/hack-attack" target="_blank" onclick="event.stopPropagation()">Play on itch.io &#8594;</a>
             </div>
         </div>
 
@@ -142,7 +185,10 @@
         <div class="modal-header">
             <h2 id="modal-title"></h2>
             <div id="modal-tags" class="tags"></div>
-            <a id="modal-link" href="#" target="_blank" class="card-link" style="display:none;"></a>
+            <div class="modal-links">
+                <a id="modal-link" href="#" target="_blank" class="card-link" style="display:none;"></a>
+                <a id="modal-link2" href="#" target="_blank" class="card-link" style="display:none;"></a>
+            </div>
         </div>
         <div class="carousel">
             <button class="carousel-btn" onclick="prevImage()">&#10094;</button>
@@ -215,7 +261,7 @@ const projects = {
             <p>Portal Music is a free music library built for content creators who need background music without copyright headaches. Even paid services like Epidemic Sound can still claim your content down the road &mdash; Portal Music fixes that.</p>
             <h4>What's Inside</h4>
             <ul>
-                <li>Hundreds of tracks across genres: <strong>Hip-Hop, Electronic, Cinematic, Lo-Fi, R&B/Soul, Pop, Ambient, Country &amp; Folk</strong>, and more</li>
+                <li>Hundreds of tracks across genres: <strong>Hip-Hop, Electronic, Cinematic, Lo-Fi, R&amp;B/Soul, Pop, Ambient, Country &amp; Folk</strong>, and more</li>
                 <li>Browse by genre, search by mood or feel, <strong>download instantly</strong> &mdash; no account needed</li>
                 <li><strong>Dark, light, and sepia themes</strong> with a built-in player</li>
                 <li>Completely free for any content, including <strong>commercial work</strong></li>
@@ -232,7 +278,7 @@ const projects = {
     },
     "riskvector": {
         title: "Risk Vector",
-        link: "https://riskvector.org",
+        link: "https://www.riskvector.org",
         linkText: "riskvector.org",
         tags: ["Cybersecurity", "Monte Carlo Simulation", "JavaScript", "Risk Modeling"],
         images: [
@@ -258,6 +304,89 @@ const projects = {
                 <li><strong>Simulation Score</strong> &mdash; the result of a specific simulation run</li>
             </ul>
             <p>No paywalls. No ads. Just numbers that help people make better security decisions.</p>
+        `
+    },
+    "runway": {
+        title: "Runway",
+        link: "https://phil08533.github.io/runway/",
+        linkText: "phil08533.github.io/runway",
+        tags: ["HTML/CSS/JS", "GitHub Pages", "Budgeting", "Finance"],
+        images: [
+            "projects/runway/runway-overview.png",
+            "projects/runway/runway-expenses.png",
+            "projects/runway/runway-calculator.png"
+        ],
+        description: `
+            <p>Runway is a personal finance and budget tracking app built to answer one important question: <strong>how long can I survive on what I have?</strong> Enter your income, expenses, and current savings &mdash; Runway calculates your financial runway and burn rate.</p>
+            <h4>Features</h4>
+            <ul>
+                <li><strong>Financial Overview</strong> &mdash; live dashboard showing income, expenses, income after expenses, and savings at a glance</li>
+                <li><strong>Flexible income tracking</strong> &mdash; add multiple income sources with weekly, bi-weekly, monthly, or one-time frequencies; all normalized to monthly equivalents</li>
+                <li><strong>Expense tracking</strong> &mdash; add and categorize expenses with the same frequency flexibility</li>
+                <li><strong>Financial Runway calculator</strong> &mdash; enter your current savings and instantly see how many months (or years) you can sustain yourself</li>
+                <li><strong>Monthly Burn Rate</strong> and <strong>Savings Left</strong> displayed clearly</li>
+                <li><strong>Monthly Savings Goal</strong> and <strong>Budget Snapshots</strong> for tracking progress over time</li>
+            </ul>
+            <h4>The Tech</h4>
+            <ul>
+                <li>Pure HTML, CSS, and JavaScript &mdash; no backend, no account required</li>
+                <li>Hosted on <strong>GitHub Pages</strong></li>
+                <li>All data stored client-side</li>
+            </ul>
+        `
+    },
+    "rps-clash": {
+        title: "RPS Clash",
+        link: "https://www.rps-clash.com/",
+        linkText: "rps-clash.com",
+        tags: ["Multiplayer", "Game Dev", "JavaScript", "Real-Time", "WebSockets"],
+        images: [
+            "projects/rps-clash/rps-main.png",
+            "projects/rps-clash/rps-battle.png"
+        ],
+        description: `
+            <p>RPS Clash is an online rock paper scissors game built as a real mini-game experience &mdash; not just a simple RPS demo. Battle real players or AI opponents in best-of-7 matches, climb the leaderboard, and spend your coins on upgrades.</p>
+            <h4>Game Modes</h4>
+            <ul>
+                <li><strong>Quick Play</strong> &mdash; jump into a 1v1 best-of-7 match against another player or the Gladiator Bot</li>
+                <li><strong>Tournament</strong> &mdash; compete in tournaments to earn coins</li>
+            </ul>
+            <h4>Features</h4>
+            <ul>
+                <li><strong>Armory</strong> &mdash; buy skins, perks, and upgrade ability slots with earned coins</li>
+                <li><strong>Profile</strong> &mdash; track your stats, loadout, wins, losses, and game history</li>
+                <li><strong>Leaderboard</strong> &mdash; see the top warriors</li>
+                <li><strong>Friends</strong> &mdash; add friends and challenge them directly</li>
+                <li>Pixel art visual style with animated battle scenes and character sprites</li>
+            </ul>
+        `
+    },
+    "timeline": {
+        title: "My Circle",
+        link: "https://phil08533.github.io/TimeLine/",
+        linkText: "phil08533.github.io/TimeLine",
+        tags: ["Google Drive API", "OAuth 2.0", "GitHub Pages", "JavaScript", "Privacy"],
+        images: [
+            "projects/timeline/timeline-landing.png",
+            "projects/timeline/timeline-feed.png"
+        ],
+        description: `
+            <p>My Circle is a private social media app that lives entirely on your Google Drive. Your photos, stories, and memories are stored in <em>your</em> cloud storage &mdash; not on someone else's servers. No algorithms. No ads. Just your circles.</p>
+            <h4>Features</h4>
+            <ul>
+                <li><strong>Circles</strong> &mdash; group your people (family, close friends, coworkers) and share with only who you choose</li>
+                <li><strong>Stories</strong> &mdash; share 24-hour moments that appear in your circle's feed</li>
+                <li><strong>Albums</strong> &mdash; collect and curate photos by occasion (trips, birthdays, events); invite collaborators to contribute</li>
+                <li><strong>Feed</strong> &mdash; see posts from people in your circles with reactions, comments, and sharing</li>
+                <li>Sign in with Google &mdash; a <code>myCircle/</code> folder is created in your Drive and we never touch anything else</li>
+            </ul>
+            <h4>The Tech</h4>
+            <ul>
+                <li>Fully static site hosted on <strong>GitHub Pages</strong> &mdash; zero server costs</li>
+                <li><strong>Google Drive Permissions API</strong> handles all sharing and access control</li>
+                <li><strong>OAuth 2.0</strong> for authentication &mdash; your data never touches our systems</li>
+                <li>Open source</li>
+            </ul>
         `
     },
     "ai-music": {
@@ -314,32 +443,33 @@ const projects = {
         `
     },
     "cyber-game": {
-        title: "Cybersecurity Adventure Game",
-        link: null,
-        tags: ["Godot", "GDScript", "Game Dev", "Capstone", "Team Project"],
+        title: "Hack Attack",
+        link: "https://loveandmilk.itch.io/hack-attack",
+        linkText: "Play on itch.io",
+        link2: "https://youtu.be/xEPH5fh5lwo?si=0PsFSRIr7_uX9IS_",
+        link2Text: "Watch Walkthrough",
+        tags: ["Godot", "GDScript", "Game Dev", "Capstone", "Completed"],
         images: [
             "projects/cyber-game/cybergame.png",
             "projects/cyber-game/cybergameoffice.png",
             "projects/cyber-game/cybergameofficeclose.png"
         ],
         description: `
-            <p>My senior Capstone project at Concord University &mdash; a cybersecurity-themed adventure game that combines humor, storytelling, and interactive mini-games to teach core security concepts in an engaging way.</p>
-            <h4>What We Built (Semester 1)</h4>
+            <p><strong>Hack Attack is complete and available to play!</strong> My senior Capstone project at Concord University &mdash; a cybersecurity-themed adventure game that combines humor, storytelling, and interactive mini-games to teach core security concepts in an engaging way.</p>
+            <h4>About the Game</h4>
             <ul>
-                <li>Multiple custom <strong>mini-games</strong> teaching cybersecurity concepts</li>
+                <li>Multiple custom <strong>mini-games</strong> teaching real cybersecurity concepts</li>
                 <li>Original art assets and character design</li>
                 <li>A unique storyline blending office drama, surreal twists, and security lessons</li>
-                <li>Early integration framework for the full game experience</li>
                 <li>Built entirely in the <strong>Godot engine</strong>, which the team learned from scratch</li>
             </ul>
-            <h4>Semester 2 Goals</h4>
+            <h4>What We Learned</h4>
             <ul>
-                <li>Fully integrate all mini-games into one cohesive experience</li>
-                <li>Complete and polish the full storyline</li>
-                <li>Add sound design, UI improvements, and full testing</li>
-                <li>Improve version control and team collaboration practices</li>
+                <li>Full game development pipeline in <strong>Godot / GDScript</strong></li>
+                <li>Team collaboration via GitHub and version control best practices</li>
+                <li>Game design, level integration, sound, UI polish, and playtesting</li>
             </ul>
-            <p>The biggest challenge was learning a completely new engine with no prior experience &mdash; every step came with new obstacles. Working through them built real problem-solving skills, and it turned out to be a great creative outlet.</p>
+            <p>You can play the finished game on itch.io, or watch the full walkthrough on YouTube.</p>
         `
     },
     "movie-monster": {
@@ -389,10 +519,19 @@ function openModal(key) {
     const linkEl = document.getElementById("modal-link");
     if (project.link) {
         linkEl.href = project.link;
-        linkEl.textContent = project.linkText + " \u2192";
+        linkEl.textContent = project.linkText + " →";
         linkEl.style.display = "inline";
     } else {
         linkEl.style.display = "none";
+    }
+
+    const link2El = document.getElementById("modal-link2");
+    if (project.link2) {
+        link2El.href = project.link2;
+        link2El.textContent = project.link2Text + " →";
+        link2El.style.display = "inline";
+    } else {
+        link2El.style.display = "none";
     }
 
     document.getElementById("modal-description").innerHTML = project.description;
