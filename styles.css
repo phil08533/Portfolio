@@ -333,6 +333,12 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
+.modal-links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
 /* === CAROUSEL === */
 .carousel {
     display: flex;
