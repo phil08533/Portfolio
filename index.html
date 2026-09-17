@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Philip J. Gonzales — Software Developer & Cybersecurity Graduate based in Beckley, WV. Building practical zero-backend web apps, attack simulations, and operational tools.">
     <title>Philip J. Gonzales | Software Developer &amp; Cybersecurity</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2.1">
     <link rel="icon" type="image/png" href="headshot.png">
 </head>
 <body>
@@ -26,9 +26,18 @@
             <a href="https://github.com/phil08533" target="_blank" rel="noopener">GitHub</a>
             <a href="Philip%20Gonzales%20Resume.pdf" target="_blank" class="nav-btn">Resume (PDF)</a>
         </nav>
-        <button class="theme-toggle" id="theme-toggle" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
-            <span id="theme-icon">☀️</span>
-        </button>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="theme-toggle" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+                <span id="theme-icon">☀️</span>
+            </button>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" title="Toggle Menu" aria-label="Toggle Navigation Menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
     </div>
 </header>
 
@@ -816,6 +825,26 @@ themeToggleBtn.addEventListener('click', () => {
     themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
     localStorage.setItem('portfolio-theme', newTheme);
 });
+
+// Mobile menu toggle
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const navLinks = document.getElementById('nav-links');
+if (mobileMenuBtn && navLinks) {
+    mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('mobile-open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('mobile-open');
+        });
+    });
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            navLinks.classList.remove('mobile-open');
+        }
+    });
+}
 </script>
 
 </body>
