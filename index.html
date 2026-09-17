@@ -1,176 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philip Gonzales | Portfolio</title>
+    <meta name="description" content="Portfolio of Philip J. Gonzales — Software Developer & Cybersecurity Graduate based in Beckley, WV. Building practical zero-backend web apps, attack simulations, and operational tools.">
+    <title>Philip J. Gonzales | Software Developer &amp; Cybersecurity</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="headshot.png">
 </head>
 <body>
 
+<!-- NAVIGATION HEADER -->
 <header>
     <div class="container nav-bar">
-        <div class="logo">Philip Gonzales</div>
-        <nav>
+        <div class="logo-group">
+            <a href="#" class="logo">
+                <span class="logo-dot"></span>
+                Philip Gonzales
+            </a>
+        </div>
+        <nav class="nav-links" id="nav-links">
             <a href="#projects">Projects</a>
-            <a href="Philip%20Gonzales%20Resume.pdf" target="_blank">Resume</a>
-            <a href="https://www.linkedin.com/in/philip-gonzales/" target="_blank">LinkedIn</a>
+            <a href="#resume">Experience &amp; Resume</a>
+            <a href="https://www.linkedin.com/in/philip-gonzales/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/phil08533" target="_blank" rel="noopener">GitHub</a>
+            <a href="Philip%20Gonzales%20Resume.pdf" target="_blank" class="nav-btn">Resume (PDF)</a>
         </nav>
+        <button class="theme-toggle" id="theme-toggle" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+            <span id="theme-icon">☀️</span>
+        </button>
     </div>
 </header>
 
+<!-- HERO SECTION -->
 <section class="hero">
     <div class="container hero-inner">
-        <img src="headshot.png" alt="Philip Gonzales" class="headshot">
-        <div class="hero-text">
-            <h1>Philip Gonzales</h1>
-            <h2>Cybersecurity &amp; Software Developer</h2>
-            <p>B.S. Cybersecurity candidate (May 2026) at Concord University. I build real-world tools, zero-backend web apps, cyber attack simulators, music platforms, SAAS webapps, and games. I care about making things that are actually useful (and making money!)</p>
-            <div class="hero-links">
-                <a href="Philip%20Gonzales%20Resume.pdf" target="_blank" class="btn">View Resume</a>
-                <a href="https://www.linkedin.com/in/philip-gonzales/" target="_blank" class="btn btn-outline">LinkedIn</a>
+        <div class="avatar-container">
+            <img src="headshot.png" alt="Philip Gonzales" class="headshot">
+            <div class="status-badge">
+                <span class="pulse-dot"></span>
+                Available for Roles
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-eyebrow">Software Developer &amp; Cybersecurity Specialist • Beckley, WV</div>
+            <h1 class="hero-title">Philip J. Gonzales</h1>
+            <p class="hero-subtitle">Dual B.S. in Computer Information Systems &amp; Cybersecurity (Concord University, May 2026)</p>
+            <p class="hero-bio">
+                Combining <strong>13 years of business ownership and operations management</strong> with hands-on software engineering in <strong>Python, C++, SQL, JavaScript, Bash, and Linux</strong>. I specialize in building zero-backend architectures, cyberattack simulations, and automated data pipelines—focusing on practical tools that solve real operational challenges without unnecessary server overhead.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View Projects</span>
+                    <span>↓</span>
+                </a>
+                <a href="Philip%20Gonzales%20Resume.pdf" target="_blank" class="btn btn-secondary">
+                    <span>📄 Download Resume (PDF)</span>
+                </a>
+                <a href="https://www.linkedin.com/in/philip-gonzales/" target="_blank" rel="noopener" class="btn btn-secondary">
+                    <span>LinkedIn ↗</span>
+                </a>
+                <a href="https://github.com/phil08533" target="_blank" rel="noopener" class="btn btn-secondary">
+                    <span>GitHub ↗</span>
+                </a>
             </div>
         </div>
     </div>
 </section>
 
+<!-- STATS BAR -->
+<div class="stats-bar">
+    <div class="container stats-grid">
+        <div class="stat-item">
+            <div class="stat-number">13+ Years</div>
+            <div class="stat-label">Operations &amp; Business Leadership</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">10+ Projects</div>
+            <div class="stat-label">Independent Builds &amp; Deployed Apps</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">Dual B.S.</div>
+            <div class="stat-label">CIS &amp; Cybersecurity (Minor in Math)</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">5 Semesters</div>
+            <div class="stat-label">Dean’s List Honor Recipient</div>
+        </div>
+    </div>
+</div>
+
+<!-- PROJECTS SECTION -->
 <section id="projects" class="container section">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-
-        <div class="card" onclick="openModal('voidscroll')">
-            <div class="card-thumb">
-                <img src="projects/voidscroll/voidscrollmain.png" alt="VoidScroll">
-            </div>
-            <div class="card-body">
-                <h3>VoidScroll</h3>
-                <p>Zero-backend infinite scroll video app with 30,000+ public domain videos across 17 categories. No algorithm, no ads, no data collection.</p>
-                <div class="tags">
-                    <span>HTML/CSS/JS</span><span>PWA</span><span>Python</span><span>Archive.org API</span>
-                </div>
-                <a class="card-link" href="https://voidscroll.org" target="_blank" onclick="event.stopPropagation()">voidscroll.org &#8594;</a>
-            </div>
+    <div class="section-header">
+        <div>
+            <h2 class="section-title">Featured Projects &amp; Software Builds</h2>
+            <p class="section-subtitle">Web applications, simulation engines, and tools built independently from scratch.</p>
         </div>
+    </div>
 
-        <div class="card" onclick="openModal('portal-music')">
+    <!-- CATEGORY FILTERS -->
+    <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterProjects('all')">All Builds (10)</button>
+        <button class="filter-btn" onclick="filterProjects('web')">Web Platforms (4)</button>
+        <button class="filter-btn" onclick="filterProjects('cyber')">Cybersecurity &amp; Simulation (2)</button>
+        <button class="filter-btn" onclick="filterProjects('game')">Games &amp; Interactive (2)</button>
+        <button class="filter-btn" onclick="filterProjects('tool')">Apps &amp; Utilities (2)</button>
+    </div>
+
+    <div class="projects-grid" id="projects-grid">
+
+        <!-- VoidScroll -->
+        <div class="card" data-category="web" onclick="openModal('voidscroll')">
             <div class="card-thumb">
-                <img src="projects/portal-music/Screenshot 2026-03-25 113704.png" alt="Portal Music">
+                <img src="projects/voidscroll/voidscrollmain.png" alt="VoidScroll" loading="lazy">
+                <span class="card-badge">Solo Build</span>
             </div>
             <div class="card-body">
-                <h3>Portal Music</h3>
-                <p>Free music library for creators &mdash; hundreds of copyright-free tracks across 9+ genres, built-in player, dark/light/sepia themes, no account needed.</p>
-                <div class="tags">
-                    <span>Static Site</span><span>GitHub Pages</span><span>GitHub Actions</span><span>JS</span>
+                <div class="card-header">
+                    <h3 class="card-title">VoidScroll</h3>
                 </div>
-                <a class="card-link" href="https://portal-music.com" target="_blank" onclick="event.stopPropagation()">portal-music.com &#8594;</a>
-            </div>
-        </div>
-
-        <div class="card" onclick="openModal('riskvector')">
-            <div class="card-thumb">
-                <img src="projects/riskvector/riskvectormain.png" alt="Risk Vector">
-            </div>
-            <div class="card-body">
-                <h3>Risk Vector</h3>
-                <p>Free cyber attack simulation platform using Monte Carlo modeling and real breach data from IBM, Verizon, CrowdStrike, and Sophos.</p>
+                <p class="card-desc">Zero-backend infinite scroll video PWA delivering 30,000+ public domain videos across 17 categories with custom ambient sound mixing and zero server costs.</p>
                 <div class="tags">
-                    <span>Cybersecurity</span><span>Monte Carlo</span><span>JavaScript</span>
+                    <span class="tag">PWA</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Service Workers</span>
+                    <span class="tag">Python</span>
                 </div>
-                <a class="card-link" href="https://www.riskvector.org" target="_blank" onclick="event.stopPropagation()">riskvector.org &#8594;</a>
-            </div>
-        </div>
-
-        <div class="card" onclick="openModal('runway')">
-            <div class="card-thumb">
-                <img src="projects/runway/runway-overview.png" alt="Runway">
-            </div>
-            <div class="card-body">
-                <h3>Runway</h3>
-                <p>Budget tracking app that calculates your financial runway &mdash; see exactly how long your savings can sustain you given all your income and expenses.</p>
-                <div class="tags">
-                    <span>HTML/CSS/JS</span><span>GitHub Pages</span><span>Budgeting</span>
-                </div>
-                <a class="card-link" href="https://phil08533.github.io/runway/" target="_blank" onclick="event.stopPropagation()">phil08533.github.io/runway &#8594;</a>
-            </div>
-        </div>
-
-        <div class="card" onclick="openModal('rps-clash')">
-            <div class="card-thumb">
-                <img src="projects/rps-clash/rps-main.png" alt="RPS Clash">
-            </div>
-            <div class="card-body">
-                <h3>RPS Clash</h3>
-                <p>Online multiplayer rock paper scissors game. Battle real players or the computer, earn coins, unlock characters, and buy power-ups.</p>
-                <div class="tags">
-                    <span>Multiplayer</span><span>Game Dev</span><span>JavaScript</span>
-                </div>
-                <a class="card-link" href="https://www.rps-clash.com/" target="_blank" onclick="event.stopPropagation()">rps-clash.com &#8594;</a>
-            </div>
-        </div>
-
-        <div class="card" onclick="openModal('timeline')">
-            <div class="card-thumb">
-                <img src="projects/timeline/timeline-landing.png" alt="My Circle">
-            </div>
-            <div class="card-body">
-                <h3>My Circle</h3>
-                <p>Private social media app that lives entirely on your Google Drive. No servers, no ads &mdash; your photos and stories stay in your own cloud storage.</p>
-                <div class="tags">
-                    <span>Google Drive API</span><span>GitHub Pages</span><span>OAuth</span>
-                </div>
-                <a class="card-link" href="https://phil08533.github.io/TimeLine/" target="_blank" onclick="event.stopPropagation()">phil08533.github.io/TimeLine &#8594;</a>
-            </div>
-        </div>
-
-        <div class="card" onclick="openModal('ai-music')">
-            <div class="card-thumb">
-                <img src="projects/ai-music/creatitmusic.png" alt="AI Music Experiment">
-            </div>
-            <div class="card-body">
-                <h3>AI Music Experiment</h3>
-                <p>Created and published AI-generated music across all major streaming platforms &mdash; exploring the possibilities and limits of AI in the creative arts.</p>
-                <div class="tags">
-                    <span>Suno</span><span>Music Production</span><span>Research</span>
+                <div class="card-footer">
+                    <a class="card-link" href="https://voidscroll.org" target="_blank" rel="noopener" onclick="event.stopPropagation()">voidscroll.org &#8594;</a>
+                    <span class="view-details">Click for details</span>
                 </div>
             </div>
         </div>
 
-        <div class="card" onclick="openModal('pet-app')">
+        <!-- Portal Music -->
+        <div class="card" data-category="web" onclick="openModal('portal-music')">
             <div class="card-thumb">
-                <img src="projects/pet-app/Screenshot 2026-03-25 114654.png" alt="Lost Pet Finder">
+                <img src="projects/portal-music/Screenshot 2026-03-25 113704.png" alt="Portal Music" loading="lazy">
+                <span class="card-badge">Solo Build</span>
             </div>
             <div class="card-body">
-                <h3>Lost Pet Finder</h3>
-                <p>University team project &mdash; a Flask-based app connecting lost animals with shelters and foster homes, built through a full SDLC process.</p>
+                <div class="card-header">
+                    <h3 class="card-title">Portal Music</h3>
+                </div>
+                <p class="card-desc">Free royalty-free music platform for content creators with hundreds of tracks across 9+ genres, theme support, built-in player, and copyright dispute guidance.</p>
                 <div class="tags">
-                    <span>Flask</span><span>SQLite</span><span>Python</span><span>Team Project</span>
+                    <span class="tag">Static Web App</span>
+                    <span class="tag">Audio APIs</span>
+                    <span class="tag">GitHub Actions</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+                <div class="card-footer">
+                    <a class="card-link" href="https://portal-music.com" target="_blank" rel="noopener" onclick="event.stopPropagation()">portal-music.com &#8594;</a>
+                    <span class="view-details">Click for details</span>
                 </div>
             </div>
         </div>
 
-        <div class="card" onclick="openModal('cyber-game')">
+        <!-- Risk Vector -->
+        <div class="card" data-category="cyber" onclick="openModal('riskvector')">
             <div class="card-thumb">
-                <img src="projects/cyber-game/cybergame.png" alt="Hack Attack">
+                <img src="projects/riskvector/riskvectormain.png" alt="Risk Vector" loading="lazy">
+                <span class="card-badge">Solo Build</span>
             </div>
             <div class="card-body">
-                <h3>Hack Attack</h3>
-                <p>Completed capstone game &mdash; a cybersecurity-themed adventure with original mini-games, art, and storytelling. Built in Godot.</p>
-                <div class="tags">
-                    <span>Godot</span><span>GDScript</span><span>Game Dev</span><span>Capstone</span>
+                <div class="card-header">
+                    <h3 class="card-title">Risk Vector</h3>
                 </div>
-                <a class="card-link" href="https://loveandmilk.itch.io/hack-attack" target="_blank" onclick="event.stopPropagation()">Play on itch.io &#8594;</a>
+                <p class="card-desc">Cyberattack simulation platform using Monte Carlo modeling and empirical breach data from IBM, Verizon, and CrowdStrike to calculate risk and financial impact.</p>
+                <div class="tags">
+                    <span class="tag">Cybersecurity</span>
+                    <span class="tag">Monte Carlo</span>
+                    <span class="tag">Risk Modeling</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+                <div class="card-footer">
+                    <a class="card-link" href="https://www.riskvector.org" target="_blank" rel="noopener" onclick="event.stopPropagation()">riskvector.org &#8594;</a>
+                    <span class="view-details">Click for details</span>
+                </div>
             </div>
         </div>
 
-        <div class="card" onclick="openModal('movie-monster')">
+        <!-- Hack Attack -->
+        <div class="card" data-category="cyber game" onclick="openModal('cyber-game')">
             <div class="card-thumb">
-                <img src="projects/movie-monster/movie-monstermain.png" alt="Movie Monster">
+                <img src="projects/cyber-game/cybergame.png" alt="Hack Attack" loading="lazy">
+                <span class="card-badge">Project Manager &amp; Dev</span>
             </div>
             <div class="card-body">
-                <h3>Movie Monster</h3>
-                <p>Personal movie and TV tracking app powered by Google Sheets, AppSheet, Google Apps Script, and the TMDB API.</p>
+                <div class="card-header">
+                    <h3 class="card-title">Hack Attack</h3>
+                </div>
+                <p class="card-desc">Completed capstone video game teaching core cybersecurity defense and threat awareness through interactive mini-games and storyline, developed in Godot.</p>
                 <div class="tags">
-                    <span>Google Apps Script</span><span>AppSheet</span><span>TMDB API</span>
+                    <span class="tag">Godot Engine</span>
+                    <span class="tag">GDScript</span>
+                    <span class="tag">GitHub Sprints</span>
+                    <span class="tag">Capstone</span>
+                </div>
+                <div class="card-footer">
+                    <a class="card-link" href="https://loveandmilk.itch.io/hack-attack" target="_blank" rel="noopener" onclick="event.stopPropagation()">Play on itch.io &#8594;</a>
+                    <span class="view-details">Click for details</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Runway -->
+        <div class="card" data-category="web tool" onclick="openModal('runway')">
+            <div class="card-thumb">
+                <img src="projects/runway/runway-overview.png" alt="Runway" loading="lazy">
+                <span class="card-badge">Solo Build</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3 class="card-title">Runway</h3>
+                </div>
+                <p class="card-desc">Financial runway and burn rate calculator with customizable income frequencies, categorized expenses, monthly goals, and client-side data persistence.</p>
+                <div class="tags">
+                    <span class="tag">Financial Tool</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">GitHub Pages</span>
+                </div>
+                <div class="card-footer">
+                    <a class="card-link" href="https://phil08533.github.io/runway/" target="_blank" rel="noopener" onclick="event.stopPropagation()">phil08533.github.io/runway &#8594;</a>
+                    <span class="view-details">Click for details</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- RPS Clash -->
+        <div class="card" data-category="game" onclick="openModal('rps-clash')">
+            <div class="card-thumb">
+                <img src="projects/rps-clash/rps-main.png" alt="RPS Clash" loading="lazy">
+                <span class="card-badge">Solo Build</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3 class="card-title">RPS Clash</h3>
+                </div>
+                <p class="card-desc">Online multiplayer rock paper scissors arena game featuring 1v1 best-of-7 matchmaking, Gladiator bot AI, currency economy, and armory upgrades.</p>
+                <div class="tags">
+                    <span class="tag">Multiplayer</span>
+                    <span class="tag">Game Dev</span>
+                    <span class="tag">WebSockets</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+                <div class="card-footer">
+                    <a class="card-link" href="https://www.rps-clash.com/" target="_blank" rel="noopener" onclick="event.stopPropagation()">rps-clash.com &#8594;</a>
+                    <span class="view-details">Click for details</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- My Circle -->
+        <div class="card" data-category="web" onclick="openModal('timeline')">
+            <div class="card-thumb">
+                <img src="projects/timeline/timeline-landing.png" alt="My Circle" loading="lazy">
+                <span class="card-badge">Solo Build</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3 class="card-title">My Circle</h3>
+                </div>
+                <p class="card-desc">Zero-server private social platform that stores photos, stories, and circle updates directly in your own Google Drive using OAuth 2.0 without data collection.</p>
+                <div class="tags">
+                    <span class="tag">Google Drive API</span>
+                    <span class="tag">OAuth 2.0</span>
+                    <span class="tag">Zero-Backend</span>
+                </div>
+                <div class="card-footer">
+                    <a class="card-link" href="https://phil08533.github.io/TimeLine/" target="_blank" rel="noopener" onclick="event.stopPropagation()">phil08533.github.io/TimeLine &#8594;</a>
+                    <span class="view-details">Click for details</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lost Pet Finder (Pawster) -->
+        <div class="card" data-category="tool" onclick="openModal('pet-app')">
+            <div class="card-thumb">
+                <img src="projects/pet-app/Screenshot 2026-03-25 114654.png" alt="Lost Pet Finder" loading="lazy">
+                <span class="card-badge">Team Project</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3 class="card-title">Lost Pet Finder (Pawster)</h3>
+                </div>
+                <p class="card-desc">University team project connecting lost animals with shelters and foster homes, built with Flask, SQLite, and full SDLC process documentation.</p>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Flask</span>
+                    <span class="tag">SQLite</span>
+                    <span class="tag">SDLC</span>
+                </div>
+                <div class="card-footer">
+                    <span class="card-link">University Prototype &#8594;</span>
+                    <span class="view-details">Click for details</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Movie Monster -->
+        <div class="card" data-category="tool" onclick="openModal('movie-monster')">
+            <div class="card-thumb">
+                <img src="projects/movie-monster/movie-monstermain.png" alt="Movie Monster" loading="lazy">
+                <span class="card-badge">Solo Build</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3 class="card-title">Movie Monster</h3>
+                </div>
+                <p class="card-desc">Personal entertainment tracking application backed by Google Sheets, Google Apps Script automation, AppSheet UI, and automated TMDB API metadata syncing.</p>
+                <div class="tags">
+                    <span class="tag">TMDB API</span>
+                    <span class="tag">Google Apps Script</span>
+                    <span class="tag">AppSheet</span>
+                </div>
+                <div class="card-footer">
+                    <span class="card-link">Personal App &#8594;</span>
+                    <span class="view-details">Click for details</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Music Research -->
+        <div class="card" data-category="game" onclick="openModal('ai-music')">
+            <div class="card-thumb">
+                <img src="projects/ai-music/creatitmusic.png" alt="AI Music Experiment" loading="lazy">
+                <span class="card-badge">Research Project</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3 class="card-title">AI Music Experiment</h3>
+                </div>
+                <p class="card-desc">Empirical investigation into generative audio models (Suno), precise prompt engineering, and digital release distribution across TikTok / streaming services.</p>
+                <div class="tags">
+                    <span class="tag">Generative Audio</span>
+                    <span class="tag">Prompt Engineering</span>
+                    <span class="tag">Distribution</span>
+                </div>
+                <div class="card-footer">
+                    <span class="card-link">Case Study &#8594;</span>
+                    <span class="view-details">Click for details</span>
                 </div>
             </div>
         </div>
@@ -178,44 +349,147 @@
     </div>
 </section>
 
-<!-- MODAL -->
+<!-- EXPERIENCE & RESUME SECTION -->
+<section id="resume" class="section resume-section">
+    <div class="container">
+        <div class="section-header">
+            <div>
+                <h2 class="section-title">Experience &amp; Background</h2>
+                <p class="section-subtitle">13 years of operations and leadership combined with formal computer science education.</p>
+            </div>
+        </div>
+
+        <div class="resume-layout">
+            <!-- Left: Timeline -->
+            <div class="resume-card">
+                <h3 class="resume-card-title">
+                    <span>💼</span>
+                    <span>Leadership &amp; Education</span>
+                </h3>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-role">Co-Founder &amp; Operations Manager</div>
+                    <div class="timeline-company">Riverside Lawn Care Inc. — Beckley, WV</div>
+                    <div class="timeline-date">2013 – Present (13 Years)</div>
+                    <div class="timeline-desc">Co-founded and scaled an operations business serving 100+ recurring accounts. Direct daily operations, crew staffing, equipment fleet logistics, and operational budgeting. Built and manage the company website (RiversideLawncareBeckley.com).</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-role">Service Manager</div>
+                    <div class="timeline-company">Bridgeport Equipment and Tools</div>
+                    <div class="timeline-date">2022 – 2023</div>
+                    <div class="timeline-desc">Supervised a service team of mechanics; oversaw diagnostic workflows, repair estimates, billing, and parts procurement for high turnaround efficiency and customer satisfaction.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-role">B.S. in CIS &amp; B.S. in Cybersecurity (Minor in Math)</div>
+                    <div class="timeline-company">Concord University — Athens, WV</div>
+                    <div class="timeline-date">Graduation: May 2026</div>
+                    <div class="timeline-desc">Dual Bachelor’s degrees. Dean’s List Honor Recipient for 5 consecutive semesters (Spring 2024 – Spring 2026). Capstone Project Manager for <em>Hack Attack</em>.</div>
+                </div>
+            </div>
+
+            <!-- Right: Skills Pillars -->
+            <div class="resume-card">
+                <h3 class="resume-card-title">
+                    <span>⚡</span>
+                    <span>Technical &amp; Operational Stack</span>
+                </h3>
+
+                <div class="skills-grid">
+                    <div class="skill-pillar">
+                        <div class="skill-pillar-name">Programming Languages</div>
+                        <div class="skill-pillar-items">Python, C++, C, SQL, JavaScript (ES6+), HTML5/CSS3, Bash, x86/ARM Assembly</div>
+                    </div>
+
+                    <div class="skill-pillar">
+                        <div class="skill-pillar-name">Frameworks &amp; Systems</div>
+                        <div class="skill-pillar-items">Flask, SQLite, Docker, Git, GitHub, VS Code, Godot Engine, Linux (Kali, Tails, Arch, Ubuntu, Mint, Void), Windows</div>
+                    </div>
+
+                    <div class="skill-pillar">
+                        <div class="skill-pillar-name">Cybersecurity &amp; Forensics</div>
+                        <div class="skill-pillar-items">Monte Carlo Attack Simulation, Wireshark, Metasploit, Ghidra, FTK Imager, Autopsy, Cisco Packet Tracer, Threat Modeling</div>
+                    </div>
+
+                    <div class="skill-pillar">
+                        <div class="skill-pillar-name">Operations &amp; Leadership</div>
+                        <div class="skill-pillar-items">Operations Management, Team Leadership, Client Relationship Management, Resource Allocation, Service Autopilot, LMN Solutions</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Banner -->
+        <div class="resume-cta-banner">
+            <div class="cta-text">
+                <h3>Official Resume Downloads</h3>
+                <p>Updated September 2026 • ATS-Optimized 1-Page Format • Available in Multiple Formats</p>
+            </div>
+            <div class="cta-downloads">
+                <a href="Philip%20Gonzales%20Resume.pdf" target="_blank" class="btn btn-primary">
+                    <span>📄 Download PDF</span>
+                </a>
+                <a href="Philip%20Gonzales%20Resume.docx" download class="btn btn-secondary">
+                    <span>📝 Download Word (.docx)</span>
+                </a>
+                <a href="Philip%20Gonzales%20Resume.odt" download class="btn btn-secondary">
+                    <span>⚙️ Download ODT</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL COMPONENT -->
 <div id="modal" class="modal" onclick="closeModalOutside(event)">
     <div class="modal-content">
-        <button class="close-btn" onclick="closeModal()">&#x2715;</button>
+        <button class="close-btn" onclick="closeModal()" aria-label="Close modal">&#x2715;</button>
         <div class="modal-header">
             <h2 id="modal-title"></h2>
             <div id="modal-tags" class="tags"></div>
             <div class="modal-links">
-                <a id="modal-link" href="#" target="_blank" class="card-link" style="display:none;"></a>
-                <a id="modal-link2" href="#" target="_blank" class="card-link" style="display:none;"></a>
+                <a id="modal-link" href="#" target="_blank" rel="noopener" class="btn btn-primary" style="display:none; padding: 7px 16px; font-size: 0.84rem;"></a>
+                <a id="modal-link2" href="#" target="_blank" rel="noopener" class="btn btn-secondary" style="display:none; padding: 7px 16px; font-size: 0.84rem;"></a>
             </div>
         </div>
         <div class="carousel">
-            <button class="carousel-btn" onclick="prevImage()">&#10094;</button>
-            <img id="carousel-image" alt="">
-            <button class="carousel-btn" onclick="nextImage()">&#10095;</button>
+            <button class="carousel-btn prev" onclick="prevImage()" aria-label="Previous image">&#10094;</button>
+            <img id="carousel-image" alt="Project screenshot">
+            <button class="carousel-btn next" onclick="nextImage()" aria-label="Next image">&#10095;</button>
         </div>
         <div id="carousel-counter" class="carousel-counter"></div>
         <div id="modal-description" class="modal-description"></div>
     </div>
 </div>
 
+<!-- FOOTER -->
 <footer>
-    <div class="container">
-        <p>Philip Gonzales &mdash;
-            <a href="https://www.linkedin.com/in/philip-gonzales/" target="_blank">LinkedIn</a> &mdash;
-            <a href="Philip%20Gonzales%20Resume.pdf" target="_blank">Resume</a>
-        </p>
+    <div class="container footer-inner">
+        <div class="footer-copy">
+            &copy; 2026 Philip J. Gonzales • Beckley, WV
+        </div>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/philip-gonzales/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/phil08533" target="_blank" rel="noopener">GitHub</a>
+            <a href="Philip%20Gonzales%20Resume.pdf" target="_blank">Resume (PDF)</a>
+            <a href="mailto:philip08533gonzales@gmail.com">Contact</a>
+        </div>
     </div>
 </footer>
 
+<!-- INTERACTIVE SCRIPTS -->
 <script>
+// Project Data
 const projects = {
     "voidscroll": {
         title: "VoidScroll",
         link: "https://voidscroll.org",
-        linkText: "voidscroll.org",
-        tags: ["HTML/CSS/JS", "PWA", "Service Worker", "Python", "Archive.org API", "GitHub Pages"],
+        linkText: "Visit voidscroll.org",
+        tags: ["PWA", "JavaScript", "Service Workers", "Python Pipeline", "Archive.org API", "Zero Backend"],
         images: [
             "projects/voidscroll/voidscrollmain.png",
             "projects/voidscroll/voidscrollambient.png",
@@ -223,31 +497,27 @@ const projects = {
             "projects/voidscroll/voidscrollsource.png"
         ],
         description: `
-            <p>VoidScroll is a zero-backend, infinite scroll video app that streams 30,000+ public domain videos &mdash; no algorithm, no ads, no data collection. It started as an experiment in building something meaningful without a server, and grew into a full-featured platform.</p>
-            <h4>What It Does</h4>
+            <p>VoidScroll is a zero-backend, infinite scroll video Progressive Web App (PWA) that streams 30,000+ public domain videos &mdash; completely free of algorithms, advertising, and user tracking. It started as an architectural challenge in serverless design and evolved into a production platform.</p>
+            <h4>Key Features</h4>
             <ul>
-                <li>Endless feed of curated content across <strong>17 categories</strong>: Space, Nature, Animals, Science, Tech, History, and more</li>
-                <li>Built-in <strong>ambient sound mixer</strong> &mdash; layer rain, ocean waves, fireplace, and forest sounds while you watch</li>
-                <li>Works offline as a <strong>Progressive Web App (PWA)</strong> &mdash; install directly from your browser</li>
-                <li>Full <strong>web browser support</strong> with keyboard navigation (arrow keys, pause)</li>
-                <li><strong>Report video</strong> &mdash; hold the share button to flag content for manual review</li>
-                <li><strong>Video source</strong> &mdash; hold the title to view the original Archive.org source</li>
+                <li>Curated video feed across <strong>17 distinct categories</strong> (Space, Science, Tech, Nature, History, and more).</li>
+                <li>Built-in <strong>ambient sound mixer</strong> &mdash; layer rain, ocean surf, campfire, and forest audio simultaneously.</li>
+                <li>Full <strong>Progressive Web App (PWA)</strong> architecture &mdash; installable directly to mobile home screens with offline caching.</li>
+                <li>Comprehensive keyboard shortcut navigation for desktop power users.</li>
             </ul>
-            <h4>The Tech</h4>
+            <h4>Technical Architecture</h4>
             <ul>
-                <li>One HTML file, vanilla JS, and static JSON &mdash; zero frameworks, zero backend</li>
-                <li>Videos scraped and deduplicated from Archive.org via a custom <strong>Python scraping pipeline</strong></li>
-                <li>Hosted on <strong>GitHub Pages</strong> with zero server costs</li>
-                <li>Gesture-driven mobile UX &mdash; swipe, tap, and scrub through content seamlessly</li>
+                <li>100% client-side vanilla JavaScript, Service Workers, and optimized static JSON payloads.</li>
+                <li>Custom <strong>Python web scraping and deduplication pipeline</strong> interfacing with the Archive.org API.</li>
+                <li>Zero hosting and server infrastructure costs using GitHub Pages.</li>
             </ul>
-            <p>The goal: take back your data, break the algorithm addiction, and find something random or learn something new.</p>
         `
     },
     "portal-music": {
         title: "Portal Music",
         link: "https://portal-music.com",
-        linkText: "portal-music.com",
-        tags: ["Static Site", "GitHub Pages", "GitHub Actions", "Fuzzy Search", "JavaScript"],
+        linkText: "Visit portal-music.com",
+        tags: ["Static Site", "Audio APIs", "GitHub Actions", "Fuzzy Search", "Zero Backend"],
         images: [
             "projects/portal-music/Screenshot 2026-03-25 113704.png",
             "projects/portal-music/Screenshot 2026-03-25 113716.png",
@@ -258,29 +528,26 @@ const projects = {
             "projects/portal-music/Screenshot 2026-03-25 113916.png"
         ],
         description: `
-            <p>Portal Music is a free music library built for content creators who need background music without copyright headaches. Even paid services like Epidemic Sound can still claim your content down the road &mdash; Portal Music fixes that.</p>
-            <h4>What's Inside</h4>
+            <p>Portal Music is a free, creator-focused digital music library designed to solve copyright claim risks for content creators on YouTube, TikTok, and social media platforms.</p>
+            <h4>Key Features</h4>
             <ul>
-                <li>Hundreds of tracks across genres: <strong>Hip-Hop, Electronic, Cinematic, Lo-Fi, R&amp;B/Soul, Pop, Ambient, Country &amp; Folk</strong>, and more</li>
-                <li>Browse by genre, search by mood or feel, <strong>download instantly</strong> &mdash; no account needed</li>
-                <li><strong>Dark, light, and sepia themes</strong> with a built-in player</li>
-                <li>Completely free for any content, including <strong>commercial work</strong></li>
-                <li>Guaranteed never to be copystriked, with a built-in guide for handling third-party claims</li>
-                <li>New music added on a weekly and monthly basis</li>
+                <li>Hundreds of cataloged tracks across 9+ genres (Lo-Fi, Hip-Hop, Electronic, Cinematic, Ambient, and more).</li>
+                <li>Client-side audio player with persistent playback and multiple color themes (Dark, Light, Sepia).</li>
+                <li>Instant downloads without mandatory account creation or tracking.</li>
+                <li>Includes an educational guide for creators on mitigating and disputing false third-party copyright claims.</li>
             </ul>
-            <h4>The Tech</h4>
+            <h4>Technical Architecture</h4>
             <ul>
-                <li>Static site on <strong>GitHub Pages</strong> &mdash; fast, zero server costs</li>
-                <li><strong>GitHub Actions</strong> auto-updates the catalog with every push</li>
-                <li>Fuzzy search, favorites, and recently played &mdash; all client-side, no backend</li>
+                <li>Automated catalog synchronization using <strong>GitHub Actions CI/CD</strong> on every push.</li>
+                <li>Client-side fuzzy searching, category filtering, and favorites caching without a database backend.</li>
             </ul>
         `
     },
     "riskvector": {
         title: "Risk Vector",
         link: "https://www.riskvector.org",
-        linkText: "riskvector.org",
-        tags: ["Cybersecurity", "Monte Carlo Simulation", "JavaScript", "Risk Modeling"],
+        linkText: "Visit riskvector.org",
+        tags: ["Cybersecurity", "Monte Carlo Simulation", "Risk Modeling", "Empirical Breach Data"],
         images: [
             "projects/riskvector/riskvectormain.png",
             "projects/riskvector/riskvectorsimpage.png",
@@ -289,157 +556,105 @@ const projects = {
             "projects/riskvector/riskvectormethodology.png"
         ],
         description: `
-            <p>Risk Vector was born from a real problem: while running a small business with my brother and completing my Cybersecurity degree at Concord University, I realized how exposed small businesses actually are &mdash; and how rarely they see real numbers around their risk. Attackers don't care that you're small.</p>
-            <p>Risk Vector is a free cyber attack simulation platform that lets any business owner, IT professional, or student simulate realistic attack scenarios against their organization.</p>
-            <h4>How It Works</h4>
+            <p>Risk Vector is an interactive cyberattack simulation platform developed to bridge the gap between abstract security frameworks and actionable financial risk assessment for small and mid-sized organizations.</p>
+            <h4>Simulation Engine</h4>
             <ul>
-                <li>Input your <strong>industry, company size, and current defenses</strong></li>
-                <li>Runs a <strong>Monte Carlo simulation</strong> using real-world data from IBM, Verizon, CrowdStrike, and Sophos</li>
-                <li>Shows most likely attack paths, estimated financial impact, and which controls reduce your risk the most</li>
+                <li>Runs probabilistic <strong>Monte Carlo simulations</strong> powered by real-world breach statistics from IBM Security, Verizon DBIR, CrowdStrike, and Sophos.</li>
+                <li>Models multi-stage attack vectors (phishing, ransomware, credential stuffing, lateral movement).</li>
+                <li>Calculates three distinct evaluation scores: <strong>Preparedness Score</strong>, <strong>Risk Level</strong>, and <strong>Simulation Posture</strong>.</li>
+                <li>Provides quantitative recommendations detailing which security controls produce the highest ROI in risk reduction.</li>
             </ul>
-            <h4>Three Score Types</h4>
-            <ul>
-                <li><strong>Preparedness Score</strong> &mdash; how well-prepared your defenses are</li>
-                <li><strong>Risk Level</strong> &mdash; overall risk factoring in defenses, company size, and location</li>
-                <li><strong>Simulation Score</strong> &mdash; the result of a specific simulation run</li>
-            </ul>
-            <p>No paywalls. No ads. Just numbers that help people make better security decisions.</p>
         `
     },
     "runway": {
         title: "Runway",
         link: "https://phil08533.github.io/runway/",
-        linkText: "phil08533.github.io/runway",
-        tags: ["HTML/CSS/JS", "GitHub Pages", "Budgeting", "Finance"],
+        linkText: "Open Runway App",
+        tags: ["Financial Planning", "JavaScript", "Client-Side Caching", "Responsive UI"],
         images: [
             "projects/runway/runway-overview.png",
-            "projects/runway/runway-expenses.png",
-            "projects/runway/runway-calculator.png"
+            "projects/runway/runway-expenses.png"
         ],
         description: `
-            <p>Runway is a personal finance and budget tracking app built to answer one important question: <strong>how long can I survive on what I have?</strong> Enter your income, expenses, and current savings &mdash; Runway calculates your financial runway and burn rate.</p>
+            <p>Runway is a minimalist financial planning and budget modeling tool built to give professionals and entrepreneurs clarity on their financial sustainability and burn rate.</p>
             <h4>Features</h4>
             <ul>
-                <li><strong>Financial Overview</strong> &mdash; live dashboard showing income, expenses, income after expenses, and savings at a glance</li>
-                <li><strong>Flexible income tracking</strong> &mdash; add multiple income sources with weekly, bi-weekly, monthly, or one-time frequencies; all normalized to monthly equivalents</li>
-                <li><strong>Expense tracking</strong> &mdash; add and categorize expenses with the same frequency flexibility</li>
-                <li><strong>Financial Runway calculator</strong> &mdash; enter your current savings and instantly see how many months (or years) you can sustain yourself</li>
-                <li><strong>Monthly Burn Rate</strong> and <strong>Savings Left</strong> displayed clearly</li>
-                <li><strong>Monthly Savings Goal</strong> and <strong>Budget Snapshots</strong> for tracking progress over time</li>
-            </ul>
-            <h4>The Tech</h4>
-            <ul>
-                <li>Pure HTML, CSS, and JavaScript &mdash; no backend, no account required</li>
-                <li>Hosted on <strong>GitHub Pages</strong></li>
-                <li>All data stored client-side</li>
+                <li>Live financial dashboard calculating exact financial runway in months and days based on current liquid reserves.</li>
+                <li>Flexible multi-frequency income and expense tracking (weekly, bi-weekly, monthly, one-time).</li>
+                <li>Instant monthly burn rate and net savings projection without requiring accounts or cloud data transfer.</li>
             </ul>
         `
     },
     "rps-clash": {
         title: "RPS Clash",
         link: "https://www.rps-clash.com/",
-        linkText: "rps-clash.com",
-        tags: ["Multiplayer", "Game Dev", "JavaScript", "Real-Time", "WebSockets"],
+        linkText: "Play RPS Clash",
+        tags: ["Multiplayer", "Game Dev", "WebSockets", "JavaScript"],
         images: [
             "projects/rps-clash/rps-main.png",
             "projects/rps-clash/rps-battle.png"
         ],
         description: `
-            <p>RPS Clash is an online rock paper scissors game built as a real mini-game experience &mdash; not just a simple RPS demo. Battle real players or AI opponents in best-of-7 matches, climb the leaderboard, and spend your coins on upgrades.</p>
-            <h4>Game Modes</h4>
+            <p>RPS Clash elevates traditional rock-paper-scissors into a competitive digital arena featuring real-time multiplayer combat, bot AI, tournament brackets, and a cosmetic upgrade economy.</p>
+            <h4>Gameplay Systems</h4>
             <ul>
-                <li><strong>Quick Play</strong> &mdash; jump into a 1v1 best-of-7 match against another player or the Gladiator Bot</li>
-                <li><strong>Tournament</strong> &mdash; compete in tournaments to earn coins</li>
-            </ul>
-            <h4>Features</h4>
-            <ul>
-                <li><strong>Armory</strong> &mdash; buy skins, perks, and upgrade ability slots with earned coins</li>
-                <li><strong>Profile</strong> &mdash; track your stats, loadout, wins, losses, and game history</li>
-                <li><strong>Leaderboard</strong> &mdash; see the top warriors</li>
-                <li><strong>Friends</strong> &mdash; add friends and challenge them directly</li>
-                <li>Pixel art visual style with animated battle scenes and character sprites</li>
+                <li>1v1 best-of-7 ranked matches against live opponents or automated Gladiator bots.</li>
+                <li>In-game currency economy, player stats tracking, custom cosmetic loadouts, and leaderboards.</li>
+                <li>Pixel-art visual aesthetic with custom character animations.</li>
             </ul>
         `
     },
     "timeline": {
         title: "My Circle",
         link: "https://phil08533.github.io/TimeLine/",
-        linkText: "phil08533.github.io/TimeLine",
-        tags: ["Google Drive API", "OAuth 2.0", "GitHub Pages", "JavaScript", "Privacy"],
+        linkText: "Launch My Circle",
+        tags: ["Google Drive API", "OAuth 2.0", "Privacy Architecture", "Client-Side"],
         images: [
             "projects/timeline/timeline-landing.png",
             "projects/timeline/timeline-feed.png"
         ],
         description: `
-            <p>My Circle is a private social media app that lives entirely on your Google Drive. Your photos, stories, and memories are stored in <em>your</em> cloud storage &mdash; not on someone else's servers. No algorithms. No ads. Just your circles.</p>
-            <h4>Features</h4>
+            <p>My Circle is a decentralized, privacy-first personal social sharing application where user media lives entirely inside their own Google Drive account rather than on corporate servers.</p>
+            <h4>Architecture Highlights</h4>
             <ul>
-                <li><strong>Circles</strong> &mdash; group your people (family, close friends, coworkers) and share with only who you choose</li>
-                <li><strong>Stories</strong> &mdash; share 24-hour moments that appear in your circle's feed</li>
-                <li><strong>Albums</strong> &mdash; collect and curate photos by occasion (trips, birthdays, events); invite collaborators to contribute</li>
-                <li><strong>Feed</strong> &mdash; see posts from people in your circles with reactions, comments, and sharing</li>
-                <li>Sign in with Google &mdash; a <code>myCircle/</code> folder is created in your Drive and we never touch anything else</li>
-            </ul>
-            <h4>The Tech</h4>
-            <ul>
-                <li>Fully static site hosted on <strong>GitHub Pages</strong> &mdash; zero server costs</li>
-                <li><strong>Google Drive Permissions API</strong> handles all sharing and access control</li>
-                <li><strong>OAuth 2.0</strong> for authentication &mdash; your data never touches our systems</li>
-                <li>Open source</li>
+                <li>Integrates with <strong>Google Drive Permissions API</strong> and <strong>OAuth 2.0</strong> for zero-trust authentication.</li>
+                <li>Organizes posts, albums, and stories with circle-based privacy controls.</li>
+                <li>Fully static client-side web application with zero intermediate server logging.</li>
             </ul>
         `
     },
     "ai-music": {
-        title: "AI Music Experiment",
+        title: "AI Music Research Experiment",
         link: null,
-        tags: ["Suno", "AI Research", "Music Production", "Sound On / TikTok"],
+        tags: ["Generative Audio", "Suno", "Prompt Engineering", "Digital Distribution"],
         images: [
             "projects/ai-music/creatitmusic.png"
         ],
         description: `
-            <p>This project was an honest investigation into what the future might hold for AI in the music world &mdash; not as exploitation of musicians, but as an exploration of the technology's possibilities and limits. As someone who played guitar growing up, I understand the commitment it takes to master an instrument.</p>
-            <h4>The Experiment</h4>
+            <p>An exploratory research project analyzing the artistic limits, prompt engineering nuances, and distribution mechanics of generative audio models.</p>
+            <h4>Findings &amp; Takeaways</h4>
             <ul>
-                <li>Created several AI music projects using <strong>Suno</strong>, generating hundreds of songs &mdash; instrumental, AI-generated lyrics, and self-written lyrics</li>
-                <li>Published across all major streaming platforms via <strong>Sound On</strong> (owned by TikTok &mdash; free publishing with built-in TikTok promotion)</li>
-                <li>Generated approximately <strong>$80 in ~7 months</strong> with zero advertising</li>
-            </ul>
-            <h4>What I Found</h4>
-            <ul>
-                <li>AI is currently poor at writing lyrics &mdash; it rhymes regardless of meaning. <strong>Self-written or AI-assisted lyrics produce far better results.</strong></li>
-                <li>Prompting is the real craft &mdash; simple prompts yield uninspired music. A large vocabulary and detailed, precise prompts unlock much better outcomes.</li>
-            </ul>
-            <h4>The Bands</h4>
-            <ul>
-                <li><strong>Dem Bois</strong></li>
-                <li><strong>The Whiskey Pines</strong></li>
-                <li><strong>Andromeda Philharmonic</strong></li>
-                <li><strong>Avilyn Grace</strong></li>
+                <li>Engineered detailed prompt architectures across multiple virtual artist personas, identifying vocabulary constraints in generative model coherence.</li>
+                <li>Navigated commercial digital distribution via SoundOn across global streaming services.</li>
+                <li>Demonstrated that hybrid workflows (human-authored lyrics combined with AI audio synthesis) dramatically outperform pure synthetic generation.</li>
             </ul>
         `
     },
     "pet-app": {
-        title: "Lost Pet Finder",
+        title: "Lost Pet Finder (Pawster)",
         link: null,
-        tags: ["Flask", "SQLite", "Python", "HTML/CSS", "Team Project"],
+        tags: ["Python", "Flask", "SQLite", "SDLC", "Team Project"],
         images: [
             "projects/pet-app/Screenshot 2026-03-25 114654.png"
         ],
         description: `
-            <p>A university team project built with three other students. Our goal was to build something that could make a real difference &mdash; an app to help connect lost animals with foster homes and shelters, and serve as an easy hub for people looking to adopt.</p>
-            <h4>What We Built</h4>
+            <p>A university software engineering team project connecting lost animals with animal foster networks and local shelters.</p>
+            <h4>Development Scope</h4>
             <ul>
-                <li>Working prototype with a <strong>Flask + SQLite</strong> backend</li>
-                <li>User-facing interface for reporting lost pets and browsing available animals</li>
-                <li>Shelter and foster home connection features</li>
+                <li>Engineered a full-stack prototype utilizing <strong>Python, Flask, and SQLite</strong>.</li>
+                <li>Implemented user authentication, lost animal reporting workflows, and shelter matching.</li>
+                <li>Followed rigorous Software Development Life Cycle (SDLC) documentation and collaborative git sprint management.</li>
             </ul>
-            <h4>What We Learned</h4>
-            <ul>
-                <li>Web development with <strong>Flask</strong> and database management with <strong>SQLite</strong></li>
-                <li>How to complete the full <strong>Software Development Life Cycle (SDLC)</strong> at a prototype level</li>
-                <li>Team management, task delegation, and collaborative development</li>
-            </ul>
-            <p>While we didn't finish everything in the timeframe, we had a solid working prototype and the foundation for a fully functional application.</p>
         `
     },
     "cyber-game": {
@@ -447,35 +662,26 @@ const projects = {
         link: "https://loveandmilk.itch.io/hack-attack",
         linkText: "Play on itch.io",
         link2: "https://youtu.be/xEPH5fh5lwo?si=0PsFSRIr7_uX9IS_",
-        link2Text: "Watch Walkthrough",
-        tags: ["Godot", "GDScript", "Game Dev", "Capstone", "Completed"],
+        link2Text: "Watch YouTube Walkthrough",
+        tags: ["Godot Engine", "GDScript", "Agile Project Manager", "Cybersecurity Education"],
         images: [
             "projects/cyber-game/cybergame.png",
             "projects/cyber-game/cybergameoffice.png",
             "projects/cyber-game/cybergameofficeclose.png"
         ],
         description: `
-            <p><strong>Hack Attack is complete and available to play!</strong> My senior Capstone project at Concord University &mdash; a cybersecurity-themed adventure game that combines humor, storytelling, and interactive mini-games to teach core security concepts in an engaging way.</p>
-            <h4>About the Game</h4>
+            <p><strong>Senior Capstone Project at Concord University.</strong> An interactive cybersecurity adventure game built in Godot that transforms complex security principles into engaging gameplay.</p>
+            <h4>Project Leadership &amp; Engineering</h4>
             <ul>
-                <li>Multiple custom <strong>mini-games</strong> teaching real cybersecurity concepts</li>
-                <li>Original art assets and character design</li>
-                <li>A unique storyline blending office drama, surreal twists, and security lessons</li>
-                <li>Built entirely in the <strong>Godot engine</strong>, which the team learned from scratch</li>
+                <li>Served as <strong>Project Manager</strong>, organizing development sprints, task allocation, and GitHub milestone delivery.</li>
+                <li>Engineered core game mechanics in <strong>Godot / GDScript</strong>, implementing interactive mini-games demonstrating password entropy, phishing mitigation, and network defenses.</li>
             </ul>
-            <h4>What We Learned</h4>
-            <ul>
-                <li>Full game development pipeline in <strong>Godot / GDScript</strong></li>
-                <li>Team collaboration via GitHub and version control best practices</li>
-                <li>Game design, level integration, sound, UI polish, and playtesting</li>
-            </ul>
-            <p>You can play the finished game on itch.io, or watch the full walkthrough on YouTube.</p>
         `
     },
     "movie-monster": {
         title: "Movie Monster",
         link: null,
-        tags: ["Google Apps Script", "AppSheet", "TMDB API", "Google Sheets", "Automation"],
+        tags: ["TMDB API", "Google Apps Script", "AppSheet", "Automation"],
         images: [
             "projects/movie-monster/movie-monstermain.png",
             "projects/movie-monster/moviemonsterinfo.png",
@@ -483,26 +689,34 @@ const projects = {
             "projects/movie-monster/movie-monstersort.png"
         ],
         description: `
-            <p>A personal project for tracking movies and shows I want to watch. Built on Google Sheets as a database, AppSheet for the front-end, and Google Apps Script for automation &mdash; with the TMDB API pulling in posters, descriptions, and metadata automatically.</p>
-            <h4>Features</h4>
+            <p>A personal media tracking application powered by Google Sheets, AppSheet, and automated Google Apps Script workflows integrated with the The Movie Database (TMDB) API.</p>
+            <h4>Key Features</h4>
             <ul>
-                <li>Track <strong>movies and TV shows</strong> you want to watch</li>
-                <li>Ratings, comments, and <strong>favorites</strong></li>
-                <li>Multiple <strong>view modes</strong>, filtering, and search</li>
-                <li>Watched status tracking and stream options</li>
-                <li><strong>Screen-casting</strong> support</li>
-            </ul>
-            <h4>What I Learned</h4>
-            <ul>
-                <li>Working with <strong>third-party APIs</strong> and automated data retrieval</li>
-                <li>Database design and management with Google Sheets and AppSheet</li>
-                <li>Automated scripting with <strong>Google Apps Script</strong></li>
-                <li>UX/UI design and how applications communicate with each other</li>
+                <li>Automated ingestion of movie posters, summaries, and release dates via REST API.</li>
+                <li>Custom filtering, watch status tracking, and casting device integration.</li>
             </ul>
         `
     }
 };
 
+// Filtering Logic
+function filterProjects(category) {
+    const buttons = document.querySelectorAll('.filter-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    const cards = document.querySelectorAll('.projects-grid .card');
+    cards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'all' || cardCategory.includes(category)) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+// Modal Logic
 let currentKey = null;
 let currentIndex = 0;
 
@@ -510,17 +724,18 @@ function openModal(key) {
     currentKey = key;
     currentIndex = 0;
     const project = projects[key];
+    if (!project) return;
 
     document.getElementById("modal-title").textContent = project.title;
 
     const tagsEl = document.getElementById("modal-tags");
-    tagsEl.innerHTML = project.tags.map(t => `<span>${t}</span>`).join("");
+    tagsEl.innerHTML = project.tags.map(t => `<span class="tag">${t}</span>`).join("");
 
     const linkEl = document.getElementById("modal-link");
     if (project.link) {
         linkEl.href = project.link;
-        linkEl.textContent = project.linkText + " →";
-        linkEl.style.display = "inline";
+        linkEl.textContent = (project.linkText || "Live Demo") + " ↗";
+        linkEl.style.display = "inline-flex";
     } else {
         linkEl.style.display = "none";
     }
@@ -528,8 +743,8 @@ function openModal(key) {
     const link2El = document.getElementById("modal-link2");
     if (project.link2) {
         link2El.href = project.link2;
-        link2El.textContent = project.link2Text + " →";
-        link2El.style.display = "inline";
+        link2El.textContent = (project.link2Text || "Secondary Link") + " ↗";
+        link2El.style.display = "inline-flex";
     } else {
         link2El.style.display = "none";
     }
@@ -558,7 +773,7 @@ function updateCarousel() {
     const counter = document.getElementById("carousel-counter");
     const btns = document.querySelectorAll(".carousel-btn");
     if (project.images.length > 1) {
-        counter.textContent = (currentIndex + 1) + " / " + project.images.length;
+        counter.textContent = (currentIndex + 1) + " of " + project.images.length;
         btns.forEach(btn => btn.style.visibility = "visible");
     } else {
         counter.textContent = "";
@@ -582,6 +797,24 @@ document.addEventListener("keydown", function(e) {
         if (e.key === "ArrowRight") nextImage();
         if (e.key === "ArrowLeft") prevImage();
     }
+});
+
+// Theme Toggle (Dark / Light) with LocalStorage
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+const htmlEl = document.documentElement;
+
+// Initialize theme from storage or preference
+const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+htmlEl.setAttribute('data-theme', savedTheme);
+themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+
+themeToggleBtn.addEventListener('click', () => {
+    const currentTheme = htmlEl.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    htmlEl.setAttribute('data-theme', newTheme);
+    themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem('portfolio-theme', newTheme);
 });
 </script>
 
