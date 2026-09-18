@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Philip J. Gonzales — Software Developer & Cybersecurity Graduate based in Beckley, WV. Building practical zero-backend web apps, attack simulations, and operational tools.">
     <title>Philip J. Gonzales | Software Developer &amp; Cybersecurity</title>
-    <link rel="stylesheet" href="styles.css?v=2.1">
+    <link rel="stylesheet" href="styles.css?v=2.3">
     <link rel="icon" type="image/png" href="headshot.png">
 </head>
 <body>
@@ -85,7 +85,7 @@
             <div class="stat-label">Operations &amp; Business Leadership</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">10+ Projects</div>
+            <div class="stat-number">12+ Projects</div>
             <div class="stat-label">Independent Builds &amp; Deployed Apps</div>
         </div>
         <div class="stat-item">
@@ -110,14 +110,16 @@
 
     <!-- CATEGORY FILTERS -->
     <div class="filter-bar">
-        <button class="filter-btn active" onclick="filterProjects('all')">All Builds (10)</button>
-        <button class="filter-btn" onclick="filterProjects('web')">Web Platforms (4)</button>
-        <button class="filter-btn" onclick="filterProjects('cyber')">Cybersecurity &amp; Simulation (2)</button>
-        <button class="filter-btn" onclick="filterProjects('game')">Games &amp; Interactive (2)</button>
+        <button class="filter-btn active" onclick="filterProjects('all')">All Builds (12)</button>
+        <button class="filter-btn" onclick="filterProjects('web')">Web Platforms (5)</button>
+        <button class="filter-btn" onclick="filterProjects('cyber')">Cybersecurity &amp; Simulation (3)</button>
+        <button class="filter-btn" onclick="filterProjects('game')">Games &amp; Interactive (4)</button>
         <button class="filter-btn" onclick="filterProjects('tool')">Apps &amp; Utilities (2)</button>
     </div>
 
-    <div class="projects-grid" id="projects-grid">
+    <!-- PROJECTS WRAPPER (Collapsible with peek fade) -->
+    <div class="projects-wrapper collapsed" id="projects-wrapper">
+        <div class="projects-grid" id="projects-grid">
 
         <!-- VoidScroll -->
         <div class="card" data-category="web" onclick="openModal('voidscroll')">
@@ -215,6 +217,30 @@
             </div>
         </div>
 
+        <!-- CyberBuy -->
+        <div class="card" data-category="cyber game web" onclick="openModal('cyberbuy')">
+            <div class="card-thumb">
+                <img src="projects/cyberbuy/cyberbuy_main.png" alt="CyberBuy" loading="lazy">
+                <span class="card-badge">Solo Build</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3 class="card-title">CyberBuy</h3>
+                </div>
+                <p class="card-desc">Atmospheric point-and-click retro terminal investigation puzzle game engineered purely with vanilla HTML &amp; CSS, featuring CRT scanlines and secret terminal codes.</p>
+                <div class="tags">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">Interactive Fiction</span>
+                    <span class="tag">Retro UI</span>
+                </div>
+                <div class="card-footer">
+                    <a class="card-link" href="https://phil08533.github.io/CyberBuy" target="_blank" rel="noopener" onclick="event.stopPropagation()">Play CyberBuy &#8594;</a>
+                    <span class="view-details">Click for details</span>
+                </div>
+            </div>
+        </div>
+
         <!-- Runway -->
         <div class="card" data-category="web tool" onclick="openModal('runway')">
             <div class="card-thumb">
@@ -233,6 +259,30 @@
                 </div>
                 <div class="card-footer">
                     <a class="card-link" href="https://phil08533.github.io/runway/" target="_blank" rel="noopener" onclick="event.stopPropagation()">phil08533.github.io/runway &#8594;</a>
+                    <span class="view-details">Click for details</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riverside Lawn Care -->
+        <div class="card" data-category="web" onclick="openModal('riverside')">
+            <div class="card-thumb">
+                <img src="projects/riverside/riverside_main.png" alt="Riverside Lawncare &amp; Services" loading="lazy">
+                <span class="card-badge">Production Business</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3 class="card-title">Riverside Lawn Care Web Platform</h3>
+                </div>
+                <p class="card-desc">Commercial business platform and customer lead funnel designed and maintained for an active regional lawn care and hardscaping enterprise serving 100+ recurring accounts.</p>
+                <div class="tags">
+                    <span class="tag">Production Web</span>
+                    <span class="tag">Lead Capture</span>
+                    <span class="tag">SEO &amp; Analytics</span>
+                    <span class="tag">Client Funnel</span>
+                </div>
+                <div class="card-footer">
+                    <a class="card-link" href="https://riversidelawncarebeckley.com" target="_blank" rel="noopener" onclick="event.stopPropagation()">riversidelawncarebeckley.com &#8594;</a>
                     <span class="view-details">Click for details</span>
                 </div>
             </div>
@@ -355,7 +405,15 @@
             </div>
         </div>
 
-    </div>
+        </div><!-- /projects-grid -->
+
+        <div class="projects-fade-overlay" id="projects-fade-overlay">
+            <button class="btn-more" id="btn-toggle-projects" onclick="toggleProjectsExpand()" aria-label="Toggle all projects view">
+                <span id="more-btn-text">View More Projects (12 Total)</span>
+                <span id="more-btn-icon">↓</span>
+            </button>
+        </div>
+    </div><!-- /projects-wrapper -->
 </section>
 
 <!-- EXPERIENCE & RESUME SECTION -->
@@ -705,24 +763,94 @@ const projects = {
                 <li>Custom filtering, watch status tracking, and casting device integration.</li>
             </ul>
         `
+    },
+    "cyberbuy": {
+        title: "CyberBuy — Investigation Puzzle Game",
+        link: "https://phil08533.github.io/CyberBuy",
+        linkText: "Play CyberBuy Live",
+        tags: ["Solo Project", "Vanilla HTML5", "CSS3", "Puzzle Game", "Retro CRT Terminal"],
+        images: [
+            "projects/cyberbuy/cyberbuy_main.png",
+            "projects/cyberbuy/cyberbuy_terminal.png"
+        ],
+        description: `
+            <p>One of Philip's earliest solo web projects, built entirely with <strong>vanilla HTML and CSS</strong>. An atmospheric, retro-futuristic terminal investigation game where players uncover corporate secrets through hidden clues, inspect element exploration, and password-protected screens.</p>
+            <h4>Key Features &amp; Engineering</h4>
+            <ul>
+                <li><strong>Pure HTML/CSS Architecture:</strong> Crafted entirely without JavaScript or heavy frameworks, utilizing pure HTML structure, form elements, and CSS styling to build interactive branching state logic.</li>
+                <li><strong>Retro CRT &amp; Scanline Aesthetic:</strong> Implemented vintage green-screen terminal styling, animated scanlines, blinking cursor states, and dystopian corporate lore.</li>
+                <li><strong>Point-and-Click Investigation:</strong> Immersive mystery mechanics requiring players to discover authorization codes, solve riddles, and infiltrate secured company terminals.</li>
+            </ul>
+        `
+    },
+    "riverside": {
+        title: "Riverside Lawncare & Services Platform",
+        link: "https://riversidelawncarebeckley.com",
+        linkText: "Visit Live Website",
+        tags: ["Commercial Production", "Web Design", "SEO Optimization", "Quote Funnel", "Client Operations"],
+        images: [
+            "projects/riverside/riverside_main.png",
+            "projects/riverside/riverside_careers.png"
+        ],
+        description: `
+            <p>Official digital presence and customer acquisition platform engineered for <strong>Riverside Lawn Care Inc.</strong>, a commercial &amp; residential landscape and hardscaping enterprise in Beckley, WV.</p>
+            <h4>Operational &amp; Technical Scope</h4>
+            <ul>
+                <li><strong>Online Lead Capture:</strong> Developed an interactive customer quote request workflow feeding directly into daily operational dispatch and estimate pipelines.</li>
+                <li><strong>Recruiting &amp; Careers Portal:</strong> Created a dedicated career showcase detailing company culture, employee benefits, modern equipment fleets, and employment applications.</li>
+                <li><strong>Local SEO &amp; Mobile Performance:</strong> Architected local search engine optimization, service landing pages, and responsive project galleries driving organic commercial discovery across Southern West Virginia.</li>
+            </ul>
+        `
     }
 };
+
+// Projects Expand / Collapse Logic
+function toggleProjectsExpand() {
+    const wrapper = document.getElementById('projects-wrapper');
+    const btnText = document.getElementById('more-btn-text');
+    const btnIcon = document.getElementById('more-btn-icon');
+    
+    if (wrapper.classList.contains('collapsed')) {
+        wrapper.classList.remove('collapsed');
+        wrapper.classList.add('expanded');
+        btnText.textContent = "Show Fewer Projects";
+        btnIcon.textContent = "↑";
+    } else {
+        wrapper.classList.remove('expanded');
+        wrapper.classList.add('collapsed');
+        btnText.textContent = "View More Projects (12 Total)";
+        btnIcon.textContent = "↓";
+        document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+    }
+}
 
 // Filtering Logic
 function filterProjects(category) {
     const buttons = document.querySelectorAll('.filter-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
+    if (window.event && window.event.target) {
+        window.event.target.classList.add('active');
+    }
 
     const cards = document.querySelectorAll('.projects-grid .card');
     cards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
-        if (category === 'all' || cardCategory.includes(category)) {
+        if (category === 'all' || (cardCategory && cardCategory.includes(category))) {
             card.style.display = 'flex';
         } else {
             card.style.display = 'none';
         }
     });
+
+    const wrapper = document.getElementById('projects-wrapper');
+    const btnText = document.getElementById('more-btn-text');
+    const btnIcon = document.getElementById('more-btn-icon');
+    if (category !== 'all') {
+        wrapper.classList.remove('collapsed');
+        wrapper.classList.add('expanded');
+        btnText.textContent = "Show Fewer Projects";
+        btnIcon.textContent = "↑";
+    }
 }
 
 // Modal Logic

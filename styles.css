@@ -484,6 +484,82 @@ header {
     font-weight: 600;
 }
 
+/* === PROJECTS WRAPPER (Collapsible / Peek Fade) === */
+.projects-wrapper {
+    position: relative;
+    transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.projects-wrapper.collapsed {
+    max-height: 690px;
+    overflow: hidden;
+}
+
+.projects-wrapper.expanded {
+    max-height: none;
+}
+
+.projects-fade-overlay {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 260px;
+    background: linear-gradient(to bottom, rgba(9, 13, 22, 0) 0%, rgba(9, 13, 22, 0.8) 50%, var(--bg) 95%);
+    pointer-events: none;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 24px;
+    z-index: 20;
+}
+
+[data-theme="light"] .projects-fade-overlay {
+    background: linear-gradient(to bottom, rgba(248, 250, 252, 0) 0%, rgba(248, 250, 252, 0.8) 50%, var(--bg) 95%);
+}
+
+.projects-wrapper.collapsed .projects-fade-overlay {
+    display: flex;
+}
+
+.projects-wrapper.expanded .projects-fade-overlay {
+    display: flex;
+    position: relative;
+    height: auto;
+    background: transparent;
+    padding-top: 36px;
+    padding-bottom: 0;
+}
+
+.btn-more {
+    pointer-events: auto;
+    background: var(--surface);
+    color: var(--text);
+    border: 2px solid var(--accent);
+    padding: 13px 30px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: var(--radius-full);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 16px var(--accent-glow);
+    transition: var(--transition);
+}
+
+.btn-more:hover {
+    background: var(--accent);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55), 0 0 24px rgba(16, 185, 129, 0.5);
+}
+
+.btn-more #more-btn-icon {
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
 /* === PROJECTS GRID === */
 .projects-grid {
     display: grid;
@@ -1116,6 +1192,19 @@ footer {
         font-size: 0.78rem;
         white-space: nowrap;
         flex-shrink: 0;
+    }
+
+    /* Collapsible Projects Grid on Mobile */
+    .projects-wrapper.collapsed {
+        max-height: 1680px;
+    }
+    .projects-fade-overlay {
+        height: 240px;
+        padding-bottom: 22px;
+    }
+    .btn-more {
+        padding: 11px 22px;
+        font-size: 0.86rem;
     }
 
     /* Project Cards */
