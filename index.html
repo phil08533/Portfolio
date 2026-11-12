@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -98,6 +98,55 @@
         </div>
     </div>
 </div>
+
+<!-- CURRENT DEVELOPMENT SECTION -->
+<section id="current-development" class="container section">
+    <div class="section-header">
+        <div>
+            <h2 class="section-title">Current Project in Development</h2>
+            <p class="section-subtitle">The independent game studio and the flagship world currently being built under its banner.</p>
+        </div>
+    </div>
+
+    <div class="current-projects-grid">
+        <article class="current-project-card">
+            <a class="current-project-image" href="https://blork-studios.itch.io/" target="_blank" rel="noopener" aria-label="Visit Blork Studios on itch.io">
+                <img src="projects/blork%20studios/blork-itch-banner_1920x600.png" alt="Blork Studios indie game development banner" loading="lazy">
+                <span class="current-project-kicker">Independent Game Studio</span>
+            </a>
+            <div class="current-project-content">
+                <div class="current-project-heading">
+                    <h3>Blork Studios</h3>
+                    <span class="current-project-status">Solo Developer</span>
+                </div>
+                <p>Blork Studios is my independent game development studio. I design and build original games, strange worlds, memorable characters, and interactive experiences as a solo developer.</p>
+                <div class="current-project-links" aria-label="Blork Studios links">
+                    <a href="https://blork-studios.itch.io/" target="_blank" rel="noopener">itch.io</a>
+                    <a href="https://www.facebook.com/people/Blork-Studios/61595671486241/" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://x.com/blorkstudios" target="_blank" rel="noopener">X</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="current-project-card">
+            <a class="current-project-image" href="https://blork-studios.itch.io/" target="_blank" rel="noopener" aria-label="Visit Blork Studios and Art of War on itch.io">
+                <img src="projects/Art%20of%20War%3A%20Setting%20Sun/maw_16x9.jpg" alt="Art of War: Setting Sun in-game scene" loading="lazy">
+                <span class="current-project-kicker">Flagship Game • In Development</span>
+            </a>
+            <div class="current-project-content">
+                <div class="current-project-heading">
+                    <h3>Art of War: Setting Sun</h3>
+                    <span class="current-project-status">In Development</span>
+                </div>
+                <p>An original sci-fi adventure built around a wandering ship and its crew, with strange planets, open-world exploration, quests, characters, and a blend of retro space atmosphere and offbeat humor.</p>
+                <div class="current-project-links">
+                    <a href="https://blork-studios.itch.io/" target="_blank" rel="noopener">Blork Studios on itch.io</a>
+                    <a href="https://github.com/phil08533/AOW" target="_blank" rel="noopener">Development repository</a>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
 
 <!-- PROJECTS SECTION -->
 <section id="projects" class="container section">
@@ -942,7 +991,7 @@ const themeIcon = document.getElementById('theme-icon');
 const htmlEl = document.documentElement;
 
 // Initialize theme from storage or preference
-const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
 htmlEl.setAttribute('data-theme', savedTheme);
 themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 
