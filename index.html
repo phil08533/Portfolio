@@ -109,11 +109,11 @@
     </div>
 
     <div class="current-projects-grid">
-        <article class="current-project-card">
-            <a class="current-project-image" href="https://blork-studios.itch.io/" target="_blank" rel="noopener" aria-label="Visit Blork Studios on itch.io">
+        <article class="current-project-card" role="button" tabindex="0" onclick="openModal('blork-studios')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('blork-studios')}">
+            <div class="current-project-image">
                 <img src="projects/blork%20studios/blork-itch-banner_1920x600.png" alt="Blork Studios indie game development banner" loading="lazy">
                 <span class="current-project-kicker">Independent Game Studio</span>
-            </a>
+            </div>
             <div class="current-project-content">
                 <div class="current-project-heading">
                     <h3>Blork Studios</h3>
@@ -121,18 +121,18 @@
                 </div>
                 <p>Blork Studios is my independent game development studio. I design and build original games, strange worlds, memorable characters, and interactive experiences as a solo developer.</p>
                 <div class="current-project-links" aria-label="Blork Studios links">
-                    <a href="https://blork-studios.itch.io/" target="_blank" rel="noopener">itch.io</a>
-                    <a href="https://www.facebook.com/people/Blork-Studios/61595671486241/" target="_blank" rel="noopener">Facebook</a>
-                    <a href="https://x.com/blorkstudios" target="_blank" rel="noopener">X</a>
+                    <a href="https://blork-studios.itch.io/" target="_blank" rel="noopener" onclick="event.stopPropagation()">itch.io</a>
+                    <a href="https://www.facebook.com/people/Blork-Studios/61595671486241/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Facebook</a>
+                    <a href="https://x.com/blorkstudios" target="_blank" rel="noopener" onclick="event.stopPropagation()">X</a>
                 </div>
             </div>
         </article>
 
-        <article class="current-project-card">
-            <a class="current-project-image" href="https://blork-studios.itch.io/" target="_blank" rel="noopener" aria-label="Visit Blork Studios and Art of War on itch.io">
+        <article class="current-project-card" role="button" tabindex="0" onclick="openModal('art-of-war')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('art-of-war')}">
+            <div class="current-project-image">
                 <img src="projects/Art%20of%20War%3A%20Setting%20Sun/maw_16x9.jpg" alt="Art of War: Setting Sun in-game scene" loading="lazy">
                 <span class="current-project-kicker">Flagship Game • In Development</span>
-            </a>
+            </div>
             <div class="current-project-content">
                 <div class="current-project-heading">
                     <h3>Art of War: Setting Sun</h3>
@@ -140,8 +140,7 @@
                 </div>
                 <p>An original sci-fi adventure built around a wandering ship and its crew, with strange planets, open-world exploration, quests, characters, and a blend of retro space atmosphere and offbeat humor.</p>
                 <div class="current-project-links">
-                    <a href="https://blork-studios.itch.io/" target="_blank" rel="noopener">Blork Studios on itch.io</a>
-                    <a href="https://github.com/phil08533/AOW" target="_blank" rel="noopener">Development repository</a>
+                    <a href="https://blork-studios.itch.io/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Blork Studios on itch.io</a>
                 </div>
             </div>
         </article>
@@ -849,6 +848,44 @@ const projects = {
                 <li><strong>Recruiting &amp; Careers Portal:</strong> Created a dedicated career showcase detailing company culture, employee benefits, modern equipment fleets, and employment applications.</li>
                 <li><strong>Local SEO &amp; Mobile Performance:</strong> Architected local search engine optimization, service landing pages, and responsive project galleries driving organic commercial discovery across Southern West Virginia.</li>
             </ul>
+        `
+    },
+    "blork-studios": {
+        title: "Blork Studios",
+        link: "https://blork-studios.itch.io/",
+        linkText: "Visit Blork Studios on itch.io",
+        link2: "https://www.facebook.com/people/Blork-Studios/61595671486241/",
+        link2Text: "Blork Studios on Facebook",
+        tags: ["Independent Game Studio", "Solo Developer", "Original Games"],
+        images: [
+            "projects/blork%20studios/blork-itch-banner_1920x600.png",
+            "projects/blork%20studios/873855989_122103760317522382_2329651571615865640_n.jpg",
+            "projects/blork%20studios/876603353_122103762243522382_5299277564058345944_n.jpg"
+        ],
+        description: `
+            <p>Blork Studios is my independent game development studio. I'm a solo developer creating original games, strange worlds, memorable characters, and interactive experiences.</p>
+            <p>Follow the studio on <a href="https://x.com/blorkstudios" target="_blank" rel="noopener">X</a> or <a href="https://www.facebook.com/people/Blork-Studios/61595671486241/" target="_blank" rel="noopener">Facebook</a>.</p>
+        `
+    },
+    "art-of-war": {
+        title: "Art of War: Setting Sun",
+        link: "https://blork-studios.itch.io/",
+        linkText: "Follow Blork Studios on itch.io",
+        tags: ["Sci-Fi Adventure", "Open-World Exploration", "Quest Design", "Solo Development"],
+        images: [
+            "projects/Art%20of%20War%3A%20Setting%20Sun/maw_16x9.jpg",
+            "projects/Art%20of%20War%3A%20Setting%20Sun/2Vp4nJ.jpg",
+            "projects/Art%20of%20War%3A%20Setting%20Sun/5-new-pad-ocean-world.png",
+            "projects/Art%20of%20War%3A%20Setting%20Sun/9-obstacles-cleared-for-the-quest.png",
+            "projects/Art%20of%20War%3A%20Setting%20Sun/PA6%2BNy.jpg",
+            "projects/Art%20of%20War%3A%20Setting%20Sun/armory-stations.png",
+            "projects/Art%20of%20War%3A%20Setting%20Sun/beam-up.png",
+            "projects/Art%20of%20War%3A%20Setting%20Sun/itch-cover_630x500.png",
+            "projects/Art%20of%20War%3A%20Setting%20Sun/zFdRqs.jpg"
+        ],
+        description: `
+            <p>Art of War: Setting Sun is an original sci-fi adventure built around a wandering ship and its crew. Explore strange planets, uncover quests, meet memorable characters, and experience a blend of retro space atmosphere, strange humor, and unexpected horror.</p>
+            <p>Currently in development as the flagship game from Blork Studios.</p>
         `
     }
 };
