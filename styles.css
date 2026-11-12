@@ -1360,6 +1360,7 @@ footer {
     align-items: stretch;
 }
 .current-project-card {
+    cursor: pointer;
     min-width: 0;
     overflow: hidden;
     display: flex;
@@ -1374,6 +1375,10 @@ footer {
     transform: translateY(-4px);
     border-color: var(--border-hover);
     box-shadow: var(--card-shadow-hover);
+}
+.current-project-card:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
 }
 .current-project-image {
     display: block;
