@@ -109,7 +109,7 @@
     </div>
 
     <div class="current-projects-grid">
-        <article class="current-project-card" role="button" tabindex="0" onclick="openModal('blork-studios')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('blork-studios')}">
+        <article class="current-project-card" role="button" tabindex="0" onclick="openModal('blork-studios')" onkeydown="if(event.target===this&&(event.key==='Enter'||event.key===' ')){event.preventDefault();openModal('blork-studios')}">
             <div class="current-project-image">
                 <img src="projects/blork%20studios/blork-itch-banner_1920x600.png" alt="Blork Studios indie game development banner" loading="lazy">
                 <span class="current-project-kicker">Independent Game Studio</span>
@@ -128,7 +128,7 @@
             </div>
         </article>
 
-        <article class="current-project-card" role="button" tabindex="0" onclick="openModal('art-of-war')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal('art-of-war')}">
+        <article class="current-project-card" role="button" tabindex="0" onclick="openModal('art-of-war')" onkeydown="if(event.target===this&&(event.key==='Enter'||event.key===' ')){event.preventDefault();openModal('art-of-war')}">
             <div class="current-project-image">
                 <img src="projects/Art%20of%20War%3A%20Setting%20Sun/maw_16x9.jpg" alt="Art of War: Setting Sun in-game scene" loading="lazy">
                 <span class="current-project-kicker">Flagship Game • In Development</span>
